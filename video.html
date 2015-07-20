@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--Author: Heena Dhabhai -->
+<html lang="en-us">
+<head> <meta charset="utf-8"> 
+<script src="video-box.js"></script>
+	<!-- Add JQuery -->
+<script type="text/javascript" src="fancybox/lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+</head>
+<style>
+
+video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width:60%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+p{
+font-family: 'Raleway', sans-serif;
+font-size: 20px;
+text-align: center;
+color: #696969;
+border-bottom: 1px solid #E9E9E9;
+margin: auto;
+padding-top: 4px;
+padding-bottom: 8px;
+
+}
+
+form{
+color: #A6A6A6;
+font-family: 'Raleway', sans-serif;
+font-size: 16px;
+text-align: center;
+margin-top: 6px;
+padding: 4px;
+}
+
+
+</style>
+</head>
+<body>
+<video id="myVideo" controls><!-- Link to Video -->
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+<p>Created by - Heena Dhabhai </span></p>
+<form name="timeForm">
+Time Interval after which the video will pause(Default 5 seconds):
+<input type="text" id="myTime" name="time">
+<input type='button' onclick="empty()" value='Set' >
+</form>
+
+<a id= "iFrameLink" class="fancybox fancybox.iframe" href="iframe.html"></a><!-- Iframe to be displayed -->
+<!-- JQuery to enable fancybox -->
+<script type="text/javascript"><!-- JQuery to enable fancybox -->
+$(document).ready(function() {
+$(".fancybox").fancybox({
+            fitToView: false,
+            autoSize: false,
+            autoDimensions: false,
+            width: 600,
+            height: 280,
+
+});
+});
+</script>
+
+</body>
+</html>
+
